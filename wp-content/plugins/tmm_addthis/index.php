@@ -68,10 +68,10 @@ if (!class_exists('TMM_AddThis_Controller')) {
         }
 
         public static  function addthis_shortcode($atts, $content = '') {
-	        if (!isset($atts['buttons_type'])) {
+	        if (!isset($atts) && !isset($atts['buttons_type'])) {
 		        $atts['buttons_type'] = TMM::get_option('buttons_type');
 	        }
-	        if (!isset($atts['add_buttons'])) {
+	        if (!isset($atts) && !isset($atts['add_buttons'])) {
 		        $atts['add_buttons'] = TMM::get_option('add_buttons');
 	        }
 
